@@ -32,6 +32,8 @@ gem "propshaft",               "~> 0.7.0"
 gem "dotenv-rails", "~> 2.7"
 
 gem "avo",          ">= 3.0.1.beta9", source: "https://packager.dev/avo-hq/"
+gem "avo-advanced",                   source: "https://packager.dev/avo-hq/"
+gem "pundit",       "~> 2.3.1"
 
 gem "bootsnap", ">= 1.4.2", require: false
 gem "listen", "~> 3.2"

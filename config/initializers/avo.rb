@@ -29,3 +29,10 @@ Avo.configure do |config|
       end
     end
 end
+
+if defined?(Avo::DynamicFilters)
+  Avo::DynamicFilters.configure do |config|
+    config.button_label = "Advanced filters"
+    config.always_expanded = true
+  end
+end
