@@ -15,7 +15,6 @@ class Avo::Resources::CalendarInstance < Avo::BaseResource
           required:     true,
           format_using: lambda { record.account&.email },
           hide_on:      %i[edit])
-    field(:user, as: :belongs_to, sortable: true, required: true, hide_on: %i[edit])
-    # field(:user, as: :has_one, sortable: true, required: true, hide_on: %i[edit])
+    field(:user, as: :has_one, sortable: true, required: true, hide_on: %i[edit])
   end
 end
