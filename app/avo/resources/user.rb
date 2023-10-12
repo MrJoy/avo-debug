@@ -8,6 +8,10 @@ class Avo::Resources::User < Avo::BaseResource
 
     tabs do
       tab("Calendars") do
+        field(:calendars, as: :has_many, through: :accounts, discreet_pagination: true)
+      end
+
+      tab("Calendar Instances") do
         field(:calendar_instances, as: :has_many, through: :accounts, discreet_pagination: true)
       end
     end
