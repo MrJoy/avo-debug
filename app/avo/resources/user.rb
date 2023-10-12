@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Avo::Resources::User < Avo::BaseResource
+  self.title = :email
+
   def fields
     field(:id, as: :id)
 
