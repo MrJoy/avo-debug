@@ -9,7 +9,7 @@ class Avo::Resources::CalendarInstance < Avo::BaseResource
   end
 
   def fields
-    field(:id, as: :id)
+    field(:id, as: :id, filterable: true)
     field(:account,
           as:           :text,
           required:     true,
