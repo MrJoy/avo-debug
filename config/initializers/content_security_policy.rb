@@ -22,7 +22,7 @@ end
 
 Rails.application.config.middleware.insert_before(0, Rack::Cors) do
   allow do
-    origins(["localhost:5000"])
+    origins(["localhost:4000"])
 
     resource("*", headers: :any, credentials: true, methods: %i[get post delete put patch options head])
   end

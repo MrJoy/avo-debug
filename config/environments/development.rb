@@ -52,7 +52,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     protocol: "http",
     host:     "localhost",
-    port:     ENV.fetch("PORT", 5000),
+    port:     ENV.fetch("PORT", 4000),
   }
 
   config.active_support.report_deprecations             = true
