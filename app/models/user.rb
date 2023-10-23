@@ -6,4 +6,8 @@ class User < ApplicationRecord
            through: :accounts,
            source:  :calendar_instances
   has_many :calendars, through: :calendar_instances
+
+  def self.ransackable_attributes(_auth = nil) = %i[id email]
+
+  def self.ransackable_associations(_auth = nil) = %i[]
 end
