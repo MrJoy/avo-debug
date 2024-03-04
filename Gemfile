@@ -9,8 +9,8 @@ ruby_ver = raw_ruby_ver.split(".")[0..1].join(".")
 ruby "~> #{ruby_ver}"
 
 gem "pg",     "~> 1.1"
-gem "puma",   "~> 6.3.1"
-RAILS_VERSION_SPECIFIER = ["~> 7.0.3"].freeze
+gem "puma",   "~> 6.4.2"
+RAILS_VERSION_SPECIFIER = ["~> 7.1.2"].freeze
 gem "actionmailer", *RAILS_VERSION_SPECIFIER
 gem "actionpack", *RAILS_VERSION_SPECIFIER
 gem "actionview", *RAILS_VERSION_SPECIFIER
@@ -24,15 +24,15 @@ gem "devise",         "~> 4.8"
 gem "mail",           "~> 2.8.1"
 gem "rack-cors",      "~> 2.0.0"
 
-gem "cssbundling-rails",       "~> 1.3.3"
+gem "cssbundling-rails",       "~> 1.4.0"
 gem "haml-rails",              "~> 2.0"
-gem "jsbundling-rails",        "~> 1.2.1"
-gem "propshaft",               "~> 0.7.0"
+gem "jsbundling-rails",        "~> 1.3.0"
+gem "propshaft",               "~> 0.8.0"
 
-gem "dotenv-rails", "~> 2.7"
+gem "dotenv-rails", "~> 3.1"
 
-gem "avo",          ">= 3.0.1.beta9", source: "https://packager.dev/avo-hq/"
-gem "avo-advanced",                   source: "https://packager.dev/avo-hq/"
+gem "avo", "~> 3.4.0"
+gem "avo-advanced", source: "https://packager.dev/avo-hq/" # rubocop:disable Bundler/GemVersion
 gem "pundit",       "~> 2.3.1"
 
 gem "bootsnap", ">= 1.4.2", require: false

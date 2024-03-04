@@ -37,9 +37,6 @@
 # Ignore generated files
 /coverage/
 /node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
 erd.pdf
 
 /app/assets/builds/*
@@ -47,3 +44,12 @@ erd.pdf
 
 /storage/*
 !/storage/.keep
+
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+yarn-*.log*

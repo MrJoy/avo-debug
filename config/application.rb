@@ -12,8 +12,7 @@ require "active_storage/engine"
 
 Bundler.require(*Rails.groups)
 
-Dotenv::Railtie.overload
-Dotenv.load
+Dotenv::Rails.load
 
 module Core
   class Application < Rails::Application
