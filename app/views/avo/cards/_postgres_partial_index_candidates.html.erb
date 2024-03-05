@@ -1,0 +1,30 @@
+<div class="flex-1 flex p-4">
+  <div class="grow">
+    <table style="min-width: 100%">
+      <thead>
+        <tr>
+          <th class="p-2">OID</th>
+          <th class="p-2">Index</th>
+          <th class="p-2">Column</th>
+          <th class="p-2">Unique?</th>
+          <th class="p-2">Size</th>
+          <th class="p-2">NULL Fraction</th>
+          <th class="p-2">Exp. Savings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @card.data.each do |row| %>
+          <tr>
+            <td class="p-2"><%= row["oid"] %></td>
+            <td class="p-2"><%= row["index"] %></td>
+            <td class="p-2"><%= row["indexed_column"] %></td>
+            <td class="p-2"><%= row["unique"] %></td>
+            <td class="p-2" style="text-align: right"><%= row["size"] %></td>
+            <td class="p-2" style="text-align: right"><%= row["null_frac"] %></td>
+            <td class="p-2" style="text-align: right"><%= row["expected_saving"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

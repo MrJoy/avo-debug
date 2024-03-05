@@ -25,7 +25,13 @@ Avo.configure do |config|
         resource(:users, label: "Users")
 
         resource(:calendars, label: "Calendars")
-        resource(:calendar_instances, label: "Calendar Instances")
+      end
+
+      section("Operations",
+              icon:        "heroicons/outline/wrench-screwdriver",
+              collapsable: true,
+              collapsed:   false) do
+        dashboard(:oltp_health, label: "OLTP DB Health")
       end
     end
 end

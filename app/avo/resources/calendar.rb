@@ -16,7 +16,7 @@ class Avo::Resources::Calendar < Avo::BaseResource
   self.record_selector = false
 
   def fields
-    field(:id, as: :id)
+    field(:id,        as: :id)
     field(:remote_id, as: :text, filterable: true)
 
     field(:calendar_instances, as: :has_many, discreet_pagination: true)

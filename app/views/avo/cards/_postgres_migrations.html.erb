@@ -1,0 +1,26 @@
+<div class="flex-1 flex p-4">
+  <div class="grow">
+    <table style="min-width: 100%">
+      <thead>
+        <tr>
+          <th class="p-2">Version</th>
+          <th class="p-2">Name</th>
+          <th class="p-2">Applied?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @card.data.last.each do |row| %>
+          <tr>
+            <td class="p-2"><%= row[0] %></td>
+            <td class="p-2"><%= row[1] %></td>
+            <!-- TODO: Render the next column as a badge! -->
+            <td class="p-2"><%= row[2] ? "Yes" : "no" %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td class="p-2" colspan="3">... (plus <%= @card.data.first %> more)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

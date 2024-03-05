@@ -1,0 +1,28 @@
+<div class="flex-1 flex p-4">
+  <div class="grow">
+    <table style="min-width: 100%">
+      <thead>
+        <tr>
+          <th class="p-2">Table</th>
+          <th class="p-2">Name</th>
+          <th class="p-2">Size</th>
+          <th class="p-2">Scans</th>
+          <th class="p-2">Tuples Read</th>
+          <th class="p-2">Tuples Fetched</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @card.data.each do |row| %>
+          <tr>
+            <td class="p-2"><%= row["table"] %></td>
+            <td class="p-2"><%= row["name"] %></td>
+            <td class="p-2" style="text-align: right"><%= number_to_human_size(row["size"]) %></td>
+            <td class="p-2" style="text-align: right"><%= number_to_human(row["scans"]) %></td>
+            <td class="p-2" style="text-align: right"><%= number_to_human(row["tuples_read"]) %></td>
+            <td class="p-2" style="text-align: right"><%= number_to_human(row["tuples_fetched"]) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
