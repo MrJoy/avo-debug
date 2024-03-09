@@ -11,7 +11,6 @@ class Avo::Resources::Calendar < Avo::BaseResource
                         remote_id_cont: params[:q],
                         m:              "or")
                .result(distinct: false)
-               .unscope(:limit)
            end,
   }
 
