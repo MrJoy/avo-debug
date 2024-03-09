@@ -4,6 +4,17 @@
 class Avo::Resources::Calendar < Avo::BaseResource
   self.title = :id
 
+  self.search = {
+    query: lambda do
+             query
+               .ransack(id_eq:          params[:q],
+                        remote_id_cont: params[:q],
+                        m:              "or")
+               .result(distinct: false)
+               .unscope(:limit)
+           end,
+  }
+
   self.index_controls = -> {}
 
   self.row_controls = -> {}
@@ -14,6 +25,8 @@ class Avo::Resources::Calendar < Avo::BaseResource
     end
 
   self.record_selector = false
+
+  self.link_to_child_resource = true
 
   def fields
     field(:id,        as: :id)
