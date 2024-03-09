@@ -2,7 +2,7 @@
 
 # Admin resource for user GoogleCalendars.
 class Avo::Resources::Calendar < Avo::BaseResource
-  self.title = :id
+  self.title = :remote_id # Can't use numeric value here, or search breaks!
 
   self.search = {
     query: lambda do
