@@ -10,6 +10,21 @@ Avo.configure do |config|
   config.current_user_method = :current_administrator
   config.current_user_resource_name = :administrator
 
+  config.logger =
+    lambda {
+      file_logger = ActiveSupport::Logger.new($stdout)
+
+      file_logger.datetime_format = "%Y-%m-%d %H:%M:%S"
+      file_logger.formatter =
+        proc do |_severity, time, _progname, msg|
+          "[Avo] #{time}: #{msg}\n".tap do |i|
+            puts i
+          end
+        end
+
+      file_logger
+    }
+
   config.locale = :en
   config.per_page = 48
   config.per_page_steps = [12, 24, 48, 72, 144]
