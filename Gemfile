@@ -10,7 +10,7 @@ ruby "~> #{ruby_ver}"
 
 gem "pg",     "~> 1.1"
 gem "puma",   "~> 6.4.2"
-RAILS_VERSION_SPECIFIER = ["~> 7.1.2"].freeze
+RAILS_VERSION_SPECIFIER = ["~> 7.2.0"].freeze
 gem "actionmailer", *RAILS_VERSION_SPECIFIER
 gem "actionpack", *RAILS_VERSION_SPECIFIER
 gem "actionview", *RAILS_VERSION_SPECIFIER
@@ -31,7 +31,7 @@ gem "propshaft",               "~> 0.8.0"
 
 gem "dotenv-rails", "~> 3.1"
 
-gem "avo", "~> 3.4.0"
+gem "avo", "~> 3.11.0"
 gem "avo-advanced", source: "https://packager.dev/avo-hq/" # rubocop:disable Bundler/GemVersion
 gem "pundit",       "~> 2.3.1"
 
