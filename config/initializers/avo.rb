@@ -3,7 +3,7 @@
 Avo.configure do |config|
   config.root_path = "/admin"
   config.home_path = "/admin"
-  config.license_key = Rails.configuration.avo_key
+  config.license_key = Rails.configuration.avo_key rescue nil
   # config.set_context do
   # end
 
