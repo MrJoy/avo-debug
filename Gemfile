@@ -9,7 +9,7 @@ ruby_ver = raw_ruby_ver.split(".")[0..1].join(".")
 ruby "~> #{ruby_ver}"
 
 gem "pg",     "~> 1.1"
-gem "puma",   "~> 6.4.2"
+gem "puma",   "~> 6.4.3"
 RAILS_VERSION_SPECIFIER = ["~> 7.2.0"].freeze
 gem "actionmailer", *RAILS_VERSION_SPECIFIER
 gem "actionpack", *RAILS_VERSION_SPECIFIER
